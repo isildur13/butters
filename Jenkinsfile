@@ -4,13 +4,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+
+		go build butters-bottom.go 		
+                
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
-            }
+
+               ./butters-bottom
+
+           }
         }
         stage('Deploy') {
             steps {
