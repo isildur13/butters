@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
 
-		bash '''
+		sh '''
 	             #!/bin/bash
 		     go build butters-bottom.go 		
 		     '''                
@@ -14,7 +14,7 @@ pipeline {
         stage('Test') {
             steps {
 	        
-            bash '''  ./butters-bottom '''
+            sh '''  ./butters-bottom '''
 
            }
         }
