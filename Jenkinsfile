@@ -5,14 +5,16 @@ pipeline {
         stage('Build') {
             steps {
 
-		go build butters-bottom.go 		
-                
+		bash '''
+	             #!/bin/bash
+		     go build butters-bottom.go 		
+		     '''                
             }
         }
         stage('Test') {
             steps {
-
-               ./butters-bottom
+	        
+            bash '''  ./butters-bottom '''
 
            }
         }
