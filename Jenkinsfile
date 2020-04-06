@@ -22,7 +22,25 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+
+	    sh ''' /bin/bash cp -a butters-bottom /bin/ '''
+
             }
+
+
+	stage('Removing the Workspace..')
+
+	   step([$class: 'WsCleanup'])
+
+
+	stage('Testing..')
+
+	    steps {
+		
+	    sh ''' butters-bottom '''
+
+	    }	
+
         }
     }
 }   
