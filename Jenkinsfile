@@ -25,7 +25,7 @@ pipeline
             steps {
                 echo 'Deploying....'
 
-	    sh ''' /bin/bash cp -a butters-bottom /bin/ '''
+	    sh '''cp -a butters-bottom /bin/ '''
 
             }
 	}
