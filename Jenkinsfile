@@ -1,9 +1,6 @@
 pipeline {
-    agent any 
+    agent { label 'dev-butters' } 
 
-    node('dev-butters}')
- 
-    {
 
     stages {
         stage('Build') {
@@ -31,4 +28,4 @@ pipeline {
 }   
 
 
-     }
+    
