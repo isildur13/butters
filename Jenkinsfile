@@ -38,13 +38,13 @@ pipeline
 	    }
 	}
 	stage('Testing..')
-
+	{
 	    steps {
 		
 	    sh ''' butters-bottom '''
 
 	    }	
-
+	}
         
     
      }   
