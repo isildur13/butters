@@ -32,7 +32,7 @@ pipeline
 
 	    sh '''cp -a butters-bottom /bin/ '''
 
-	   #archiveArtifacts 'butters-bottom'
+	   archiveArtifacts 'butters-bottom'
 
             }
 	}
