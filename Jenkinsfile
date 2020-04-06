@@ -6,6 +6,7 @@ pipeline
         stage('Build') {
             steps {
 		sh '''
+		go clean
 		go build butters-bottom.go 		
 		      '''          
             }
