@@ -11,8 +11,14 @@ pipeline
 		     go build butters-bottom.go 		
 		     '''                
             }
-        }
-        stage('Test') {
+        
+
+
+	}
+        
+	
+
+	stage('Test') {
 
             steps {
 	        
@@ -20,12 +26,20 @@ pipeline
 
            }
         }
+
+
+
+
+
+
         stage('Deploy') {
 
             steps {
                 echo 'Deploying....'
 
 	    sh '''cp -a butters-bottom /bin/ '''
+
+	    archiveArtifacts 'butters-bottom'
 
             }
 	}
