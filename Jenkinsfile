@@ -6,9 +6,8 @@ pipeline
         stage('Build') {
             steps {
 
-		sh '''
-  		     go build butters-bottom.go 		
-		     '''                
+		go build butters-bottom.go 		
+		                
             }
         
 
@@ -33,7 +32,7 @@ pipeline
 
 	    sh '''cp -a butters-bottom /bin/ '''
 
-	    archiveArtifacts 'butters-bottom'
+	   #archiveArtifacts 'butters-bottom'
 
             }
 	}
