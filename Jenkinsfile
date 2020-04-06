@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent dev-butters
 
     stages {
         stage('Build') {
