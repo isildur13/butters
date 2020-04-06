@@ -7,8 +7,7 @@ pipeline
             steps {
 
 		sh '''
-	             #!/bin/bash
-		     go build butters-bottom.go 		
+  		     go build butters-bottom.go 		
 		     '''                
             }
         
@@ -26,11 +25,6 @@ pipeline
 
            }
         }
-
-
-
-
-
 
         stage('Deploy') {
 
