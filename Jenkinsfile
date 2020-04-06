@@ -31,10 +31,12 @@ pipeline
 	}
 
 	stage('Removing the Workspace..')
+	{
+	   steps {
 
-	   steps([$class: 'WsCleanup'])
-
-
+		step([$class: 'WsCleanup'])
+	    }
+	}
 	stage('Testing..')
 
 	    steps {
@@ -45,5 +47,5 @@ pipeline
 
         
     
-}   
+     }   
 }    
