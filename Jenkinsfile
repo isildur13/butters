@@ -1,8 +1,8 @@
-pipeline {
+pipeline 
+{
     agent { label 'dev-butters' } 
-
-
     stages {
+
         stage('Build') {
             steps {
 
@@ -13,6 +13,7 @@ pipeline {
             }
         }
         stage('Test') {
+
             steps {
 	        
             sh '''  ./butters-bottom '''
@@ -20,17 +21,18 @@ pipeline {
            }
         }
         stage('Deploy') {
+
             steps {
                 echo 'Deploying....'
 
 	    sh ''' /bin/bash cp -a butters-bottom /bin/ '''
 
             }
-
+	}
 
 	stage('Removing the Workspace..')
 
-	   step([$class: 'WsCleanup'])
+	   steps([$class: 'WsCleanup'])
 
 
 	stage('Testing..')
@@ -41,8 +43,8 @@ pipeline {
 
 	    }	
 
-        }
-    }
+        
+    
 }   
 
 
