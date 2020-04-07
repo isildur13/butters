@@ -7,7 +7,6 @@ pipeline
             steps {
 		sh '''
 		#!/bin/bash
-		go clean
 		go run butters-bottom.go 		
 		      '''          
             }
