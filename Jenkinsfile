@@ -5,9 +5,10 @@ pipeline
 
         stage('Build') {
             steps {
-		export PATH=$PATH:/usr/local/go/bin
+
 		sh '''
 		#!/bin/bash
+		export PATH=$PATH:/usr/local/go/bin
 		go run butters-bottom.go 		
 		      '''          
             }
