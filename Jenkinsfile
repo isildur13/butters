@@ -31,7 +31,7 @@ pipeline
             steps {
                 echo 'Deploying....'
 
-	    sh '''mv -a butters-bottom /bin/ '''
+	    sh '''mv butters-bottom /bin/ '''
 
 	   archiveArtifacts 'butters-bottom'
 
