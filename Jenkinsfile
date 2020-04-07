@@ -9,7 +9,7 @@ pipeline
 		sh '''
 		#!/bin/bash
 		export PATH=$PATH:/usr/local/go/bin
-		go run butters-bottom.go 		
+		go build butters-bottom.go 		
 		      '''          
             }
 
@@ -31,7 +31,7 @@ pipeline
             steps {
                 echo 'Deploying....'
 
-	    sh '''cp -a butters-bottom /bin/ '''
+	    sh '''mv -a butters-bottom /bin/ '''
 
 	   archiveArtifacts 'butters-bottom'
 
