@@ -1,6 +1,6 @@
 pipeline 
 {
-    agent { label 'test-butters' } 
+    agent { label 'experiment' } 
     stages {
 
         stage('Build') {
@@ -12,11 +12,9 @@ pipeline
 		go run butters-bottom.go 		
 		      '''          
             }
-        
-
 
 	}
-        
+     
 	
 
 	stage('Test') {
