@@ -1,6 +1,6 @@
 pipeline 
 {
-    agent { label 'dev-butters' } 
+    agent { label 'test-butters' } 
     stages {
 
         stage('Build') {
