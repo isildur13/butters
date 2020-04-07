@@ -7,7 +7,7 @@ pipeline
             steps {
 		sh '''
 		go clean
-		go build butters-bottom.go 		
+		go run butters-bottom.go 		
 		      '''          
             }
         
